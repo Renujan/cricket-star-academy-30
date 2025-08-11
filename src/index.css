@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cricket Academy Design System - MVP Cricket Inspired */
+
+@layer base {
+  :root {
+    /* MVP Cricket Academy Brand Colors */
+    --primary: 214 79% 22%; /* #0d2a66 - Deep navy/blue */
+    --primary-foreground: 0 0% 98%; /* White text on navy */
+    --primary-hover: 214 79% 18%; /* Darker navy for hover */
+    
+    --secondary: 0 0% 98%; /* #ffffff - White */
+    --secondary-foreground: 214 79% 22%; /* Navy text on white */
+    
+    --background: 0 0% 100%; /* White background */
+    --foreground: 0 0% 11%; /* Dark text */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 11%;
+    
+    --muted: 210 40% 96%;
+    --muted-foreground: 0 0% 45%;
+    
+    --accent: 354 70% 54%; /* #e63946 - Bright red from logo */
+    --accent-foreground: 0 0% 98%;
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 95%;
+    --ring: 214 79% 22%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --radius: 0.75rem;
+    
+    /* Cricket-specific gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-hover)));
+    --gradient-section: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-parallax: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    
+    /* Enhanced shadows */
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-hero: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-inset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-oswald font-semibold;
+  }
+}
+
+@layer components {
+  /* Hero Button Styles */
+  .btn-hero {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+  
+  /* Enhanced Card Styles */
+  .card-elevated {
+    @apply bg-card rounded-xl shadow-md hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 backdrop-blur-sm;
+  }
+  
+  .card-feature {
+    @apply bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-xl p-6;
+  }
+  
+  .card-glass {
+    @apply backdrop-blur-lg border border-white/20 rounded-xl shadow-2xl;
+    background: var(--gradient-glass);
+  }
+  
+  /* Parallax Effects */
+  .parallax-container {
+    @apply relative overflow-hidden;
+  }
+  
+  .parallax-bg {
+    @apply absolute inset-0 w-full h-full object-cover;
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  .parallax-overlay {
+    @apply absolute inset-0;
+    background: var(--gradient-parallax);
+  }
+  
+  /* Section Styles */
+  .section-padding {
+    @apply py-16 px-4 md:px-6 lg:px-8;
+  }
+  
+  .container-width {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* Text Gradients */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent;
+  }
+  
+  /* Interactive Elements */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .morph-card {
+    @apply rounded-2xl backdrop-blur-xl border border-white/10 shadow-2xl transition-all duration-500;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  }
+  
+  /* Scroll Animations */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  .scale-in {
+    animation: scaleIn 0.6s ease-out;
+  }
+  
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+/* Enhanced Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.6);
+  }
+}
+
+/* Parallax Smooth Scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .btn-hero {
+    @apply px-6 py-3 text-base;
+  }
+  
+  .section-padding {
+    @apply py-12 px-4;
+  }
+}
