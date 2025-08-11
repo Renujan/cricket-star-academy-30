@@ -13,8 +13,8 @@ const Navbar = () => {
     { name: 'Programs', path: '/programs', hasDropdown: true },
     { name: 'Registration', path: '/registration' },
     { name: 'Announcements', path: '/announcements' },
-    { name: 'Testimonials', path: '/testimonials' },
     { name: 'Our Success', path: '/success' },
+    { name: 'Cricket Store', path: '/store' },
     { name: 'Staff', path: '/staff' },
     { name: 'Policies', path: '/policies' },
     { name: 'Contact', path: '/contact' }

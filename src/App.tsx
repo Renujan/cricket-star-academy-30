@@ -12,8 +12,8 @@ import Programs from "./pages/Programs";
 import Registration from "./pages/Registration";
 import Announcements from "./pages/Announcements";
 import AnnouncementDetail from "./pages/AnnouncementDetail";
-import Testimonials from "./pages/Testimonials";
 import Success from "./pages/Success";
+import Store from "./pages/Store";
 import Staff from "./pages/Staff";
 import Policies from "./pages/Policies";
 import Contact from "./pages/Contact";
@@ -38,8 +38,8 @@ const App = () => (
               <Route path="/registration" element={<Registration />} />
               <Route path="/announcements" element={<Announcements />} />
               <Route path="/announcements/:id" element={<AnnouncementDetail />} />
-              <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/success" element={<Success />} />
+              <Route path="/store" element={<Store />} />
               <Route path="/staff" element={<Staff />} />
               <Route path="/policies" element={<Policies />} />
               <Route path="/contact" element={<Contact />} />
