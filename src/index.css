@@ -231,7 +231,7 @@
   }
 }
 
-/* Responsive Design */
+/* Enhanced Mobile Responsive Design */
 @media (max-width: 768px) {
   .btn-hero {
     @apply px-6 py-3 text-base;
@@ -239,5 +239,44 @@
   
   .section-padding {
     @apply py-12 px-4;
+  }
+  
+  /* Mobile-first navigation improvements */
+  .mobile-nav-backdrop {
+    @apply fixed inset-0 bg-black/20 backdrop-blur-sm z-40;
+  }
+  
+  /* Enhanced mobile card styles */
+  .card-elevated {
+    @apply mx-2 shadow-sm hover:shadow-md;
+  }
+  
+  /* Mobile typography adjustments */
+  h1 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  h2 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+  
+  /* Mobile touch targets */
+  .mobile-touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
+
+/* Ultra small screens */
+@media (max-width: 480px) {
+  .section-padding {
+    @apply py-8 px-3;
+  }
+  
+  .container-width {
+    @apply px-4;
+  }
+  
+  .btn-hero {
+    @apply px-4 py-2 text-sm;
   }
 }
