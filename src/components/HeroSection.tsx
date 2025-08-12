@@ -16,13 +16,6 @@ const HeroSection = () => {
       <div className="container-width text-center text-white">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <div className="space-y-4">
-            <div className="flex items-center justify-center mb-6">
-              <img 
-                src="/lovable-uploads/10636441-a54d-4571-b219-2b52ab6ff600.png" 
-                alt="MVP Cricket Academy Logo" 
-                className="w-24 h-24 object-cover rounded-2xl shadow-2xl mr-6 animate-scale-in"
-              />
-            </div>
             <h1 className="text-5xl md:text-7xl font-oswald font-bold leading-tight">
               MVP Cricket Academy
               <span className="text-gradient-accent block float">Building Future Cricket Stars</span>
