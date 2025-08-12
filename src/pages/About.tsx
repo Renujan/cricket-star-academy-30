@@ -9,10 +9,19 @@ const About = () => {
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-br from-secondary via-secondary/95 to-secondary/90 text-secondary-foreground">
         <div className="container-width text-center">
-          <h1 className="text-5xl md:text-6xl font-oswald font-bold mb-6">
-            About Our
-            <span className="text-gradient block">Cricket Academy</span>
-          </h1>
+          <div className="flex items-center justify-center mb-8">
+            <img 
+              src="/lovable-uploads/10636441-a54d-4571-b219-2b52ab6ff600.png" 
+              alt="MVP Cricket Academy Logo" 
+              className="w-20 h-20 object-cover rounded-xl shadow-lg mr-6"
+            />
+            <div className="text-left">
+              <h1 className="text-4xl md:text-5xl font-oswald font-bold mb-2">
+                About Our
+                <span className="text-gradient block">Cricket Academy</span>
+              </h1>
+            </div>
+          </div>
           <p className="text-xl md:text-2xl text-secondary-foreground/90 max-w-3xl mx-auto leading-relaxed">
             Building champions through dedication, expertise, and passion for cricket since 2016.
           </p>

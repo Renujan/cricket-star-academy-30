@@ -35,9 +35,11 @@ const Footer = () => {
           {/* Academy Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-oswald font-bold text-lg">CA</span>
-              </div>
+              <img 
+                src="/lovable-uploads/10636441-a54d-4571-b219-2b52ab6ff600.png" 
+                alt="MVP Cricket Academy Logo" 
+                className="w-12 h-12 object-cover rounded-lg shadow-md"
+              />
               <div>
                 <h3 className="font-oswald font-bold text-lg">MVP Cricket Academy</h3>
                 <p className="text-sm text-secondary-foreground/80">Building Future Cricket Stars</p>
