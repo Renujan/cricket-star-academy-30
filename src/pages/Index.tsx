@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, ChevronRight, Star, Users, Target, Award } from 'lucide-react';
 import HeroSection from '@/components/HeroSection';
+import YouTubeVideoSection from '@/components/YouTubeVideoSection';
 import { events, testimonials } from '@/data/sampleData';
 import trainingImage from '@/assets/training-session.jpg';
 
@@ -10,6 +11,9 @@ const Index = () => {
     <div>
       {/* Hero Section */}
       <HeroSection />
+
+      {/* YouTube Videos Section */}
+      <YouTubeVideoSection />
 
       {/* Quick About Section */}
       <section className="section-padding bg-gradient-section">

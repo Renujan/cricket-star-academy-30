@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import LoginModal from './LoginModal';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +41,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200">
             <div className="w-12 h-12 rounded-lg overflow-hidden shadow-md">
               <img 
-                src="/lovable-uploads/5f3870b0-855e-431d-941c-32822b629f6b.png" 
+                src="/lovable-uploads/10636441-a54d-4571-b219-2b52ab6ff600.png" 
                 alt="MVP Cricket Academy Logo" 
                 className="w-full h-full object-cover"
               />
@@ -100,9 +101,11 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <Link to="/registration" className="btn-hero">
-              Join Now
-            </Link>
+            <LoginModal>
+              <button className="btn-hero">
+                Login
+              </button>
+            </LoginModal>
           </div>
 
           {/* Enhanced Mobile menu button */}
@@ -182,13 +185,14 @@ const Navbar = () => {
                 isOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
               }`}
               style={{ transitionDelay: `${navLinks.length * 50}ms` }}>
-                <Link 
-                  to="/registration" 
-                  onClick={() => setIsOpen(false)}
-                  className="btn-hero w-full text-center"
-                >
-                  Join Now
-                </Link>
+                <LoginModal>
+                  <button 
+                    onClick={() => setIsOpen(false)}
+                    className="btn-hero w-full text-center"
+                  >
+                    Login
+                  </button>
+                </LoginModal>
               </div>
             </div>
           </div>
